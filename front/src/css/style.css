@@ -1,0 +1,205 @@
+/*++++++++++++++++++++++++++++++++++++++
+공통 css, Header 및 Footer css
+++++++++++++++++++++++++++++++++++++++*/
+/* color */
+:root {
+  /* color list */
+  --color-purple: #d6acda;
+  --color-white: #ffffff;
+  --color-category-black: #333333;
+  --color-category-gray: #999999;
+  --color-footer-bg: #f8f8f8;
+  --color-footer-text: #666666;
+  --color-header-menu: #222222;
+}
+
+/* commons */
+* {
+  box-sizing: border-box;
+  font-family: "SUIT";
+}
+
+/* a 태그 색깔 리셋 */
+a {
+  color: #852bb9;
+}
+
+.header,
+.footer,
+.content,
+body,
+div,
+nav,
+ul,
+li,
+a,
+Link,
+p {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.link-text {
+  text-decoration: none;
+}
+
+.header,
+.footer,
+.content {
+  margin: auto;
+}
+
+/* header */
+.header-overview {
+  background-color: #c7a0ce;
+  padding: 1.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-menu,
+.header-sidemenu {
+  list-style: none;
+  display: flex;
+  gap: 1.3rem;
+}
+
+.header-menu>li {
+  border: 1.5px solid #c7a0ce;
+  padding: 0.7rem 1rem;
+}
+
+.header-menu>li:hover {
+  border-bottom: 1.5px solid #fff;
+}
+
+.header-menu>li>a {
+  font-weight: 500;
+}
+
+.header-menu>li:hover>a,
+.header-sidemenu>li:hover>a {
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-btn-logout {
+  color: #852bb9;
+}
+
+.header-btn-logout:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
+/* footer */
+.footer-overview {
+  background-color: var(--color-footer-bg);
+  padding: 3rem 0 6rem 0;
+}
+
+.footer-all * {
+  font-size: 10.5pt;
+}
+
+.footer-all {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-footer-bg);
+  align-items: start;
+  padding: 2.5rem 1.8rem;
+  margin-top: 50px;
+}
+
+.footer-part1 {
+  display: flex;
+  /* align-items: center; */
+  width: 900px;
+  font-size: 15px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.footer-part1 img {
+  width: 230px;
+  object-fit: cover;
+  margin-right: 60px;
+}
+
+.footer-part1-menu {
+  margin-bottom: 50px;
+}
+
+.footer-part2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.footer-part2 h3 {
+  margin: 0 0 10px 0;
+}
+
+.footer-part2-email {
+  margin-bottom: 30px;
+}
+
+.footer-img {
+  object-fit: contain;
+}
+
+.footer-sns>div {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.footer-sns-icon {
+  font-size: 15pt;
+}
+
+/* swiper */
+#app {
+  height: 100%;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  /*  width: 100%;
+  height: 100%; */
+  --swiper-theme-color: #d6acda;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

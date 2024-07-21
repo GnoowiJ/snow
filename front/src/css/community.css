@@ -1,0 +1,448 @@
+/*++++++++++++++++++++++++++++++++++++++
+커뮤니티 관련 css
+++++++++++++++++++++++++++++++++++++++*/
+/* community overview */
+.community-menu {
+  display: flex;
+  gap: 5rem;
+  list-style: none;
+  justify-content: center;
+  padding: 1.8rem 0;
+}
+
+.community-menu button {
+  padding: 0.2rem 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 21px;
+  border: none;
+  background-color: #fff;
+  border-bottom: 3px solid #fff;
+  color: #999999;
+}
+
+.community-menu button:hover,
+.community-menu button.active {
+  color: #000;
+  font-weight: 700;
+  border-bottom: 3px solid #000;
+  cursor: pointer;
+}
+
+/* community-board (공통사용) */
+.community-board-detail {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 1200px;
+}
+
+.community-board-detail th,
+.community-board-detail td {
+  padding: 20px 15px;
+  border: 1px solid #dfdfdf;
+  text-align: left;
+}
+
+.community-board-column {
+  width: 12%;
+  background-color: #fbfafa;
+}
+
+.community-board-value-split {
+  width: 38%;
+}
+
+.community-board-value {
+  width: 88%;
+}
+
+.community-board-button {
+  width: 1200px;
+  margin: 20px auto;
+  padding: 20px 0;
+}
+
+.community-board-button button {
+  display: block;
+  border: 1px solid #dfdfdf;
+  border-radius: 4px;
+  padding: 0.6rem 2rem;
+  background: #fff;
+}
+
+.community-board-button button:hover {
+  background: #ebeaea;
+  cursor: pointer;
+}
+
+/* community-event */
+.community-event {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.community-event>div {
+  cursor: pointer;
+}
+
+.community-event>div>img {
+  display: block;
+}
+
+/* community-faq */
+.community-faq {
+  margin: 20px auto 60px;
+}
+
+.community-faq>li {
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.community-faq-first {
+  border-top: 2px solid #232323;
+}
+
+.faq-flex {
+  font-size: 17pt;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+}
+
+.faq-flex:hover {
+  cursor: pointer;
+}
+
+.wrap-plus-sign {
+  font-size: 21pt;
+  font-weight: 600;
+}
+
+.wrap-minus-sign {
+  font-size: 24pt;
+  font-weight: 600;
+}
+
+.community-faq-content {
+  text-align: left;
+  padding-bottom: 1.6rem;
+}
+
+/* community-qna */
+.qna-search-write {
+  width: 1100px;
+  height: 80px;
+  background: #f7f7f7;
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qna-search-write select {
+  padding: 5px;
+  width: 200px;
+}
+
+.qna-search-write input {
+  padding: 7px;
+  width: 300px;
+}
+
+.qna-search-write a {
+  display: block;
+  padding: 5px 0;
+  width: 100px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.qna-btn-search {
+  background: #c7a0ce;
+  border: 1px solid #c7a0ce;
+}
+
+.qna-btn-write {
+  background: #999999;
+  border: 1px solid #999999;
+}
+
+.qna-search-write input,
+.qna-search-write a {
+  margin-left: 10px;
+}
+
+.qna-table {
+  width: 1200px;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid #dfdfdf;
+  border-collapse: collapse;
+  margin: 20px auto 60px;
+}
+
+.qna-table tr {
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.qna-table th,
+.qna-table td {
+  padding: 1rem;
+  text-align: center;
+}
+
+.qna-table tbody .qna-table-title {
+  text-align: left;
+}
+
+.qna-table tbody tr:hover {
+  background: #ebeaea;
+}
+
+.qna-table-rno, .qna-table-qhits {
+  width: 90px;
+}
+
+.qna-table tbody .qna-table-title {
+  cursor: pointer;
+}
+
+.qna-table-author {
+  width: 190px;
+}
+
+.qna-table-qdate {
+  width: 150px;
+}
+.qna-table-btn-edit{
+  margin-bottom: 5px;
+}
+.qna-table-btn-edit, .qna-table-btn-delete {
+  border: 1px solid #000;
+  padding: 5px 7px;
+}
+
+.qna-page-area {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
+.qna-page-area>li {
+  font-size: 17px;
+}
+
+.qna-page-area>li:hover {
+  cursor: pointer;
+}
+
+.qna-write-table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 1200px;
+  margin: 20px auto;
+}
+
+.qna-write-table th,
+.qna-write-table td {
+  border: 1px solid #dfdfdf;
+}
+
+.qna-write-table th {
+  padding: 20px 15px;
+  width: 12%;
+  background-color: #fbfafa;
+}
+
+.qna-write-table td {
+  text-align: left;
+  padding: 15px 0;
+}
+
+.qna-write-table td input,
+.qna-write-table td select,
+.qna-write-table td textarea {
+  padding: 8px 10px;
+  font-size: 14px;
+  margin-left: 15px;
+}
+
+.qna-write-table td select {
+  width: 150px;
+}
+
+.qna-write-input-divide {
+  margin-left: 15px;
+  font-size: 17px;
+}
+
+.qna-write-input-name {
+  width: 300px;
+}
+
+.qna-write-input-email-id,
+.qna-write-input-email-domain,
+.qna-write-input-phone-middle,
+.qna-write-input-phone-last {
+  width: 150px;
+}
+
+.qna-write-input-title {
+  width: calc(100% - 30px);
+}
+
+.qna-write-table td textarea {
+  width: calc(100% - 30px);
+  height: 500px;
+  resize: none;
+}
+
+.qna-write-btn {
+  margin-bottom: 60px;
+}
+
+.qna-write-btn button {
+  width: 150px;
+  padding: 10px 0;
+  margin: 0 7px;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.qna-write-btn button:hover {
+  cursor: pointer;
+}
+
+.qna-write-insert {
+  border: 1px solid #c7a0ce;
+  background: #c7a0ce;
+  color: #fff;
+}
+
+.qna-write-insert:hover {
+  border: 1px solid #a96eb4;
+  background: #a96eb4;
+}
+
+.qna-write-reset {
+  border: 1px solid #dfdfdf;
+  background: #fff;
+}
+
+.qna-write-reset:hover {
+  border: 1px solid #dfdfdf;
+  background: #dfdfdf;
+}
+
+.qna-write-list {
+  border: 1px solid #f4edf5;
+  background: #f4edf5;
+}
+
+.qna-write-list:hover {
+  border: 1px solid #e5d2e8;
+  background: #e5d2e8;
+}
+
+/* community-review */
+.community-review-order {
+  padding: 1rem 5rem;
+  text-align: right;
+}
+
+.community-review-order select {
+  padding: 5px 30px 5px 0;
+  border: 1px solid #dfdfdf;
+  border-radius: 4px;
+}
+
+.community-review-list {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+  padding: 1rem 5rem;
+}
+
+.community-review-button {
+  margin-bottom: 60px;
+  padding: 10px 5rem;
+  text-align: right;
+}
+
+.community-review-button>a {
+  margin-left: 30px;
+}
+
+.community-review-button-policy {
+  border: none;
+  background: #fff;
+}
+
+.community-review-button-policy:hover {
+  cursor: pointer;
+}
+
+.community-review-button-write {
+  border: 1px solid #c7a0ce;
+  border-radius: 4px;
+  padding: 0.6rem 1rem;
+  background: #fff;
+  color: #c7a0ce;
+}
+
+.community-review-button-write:hover {
+  background: #c7a0ce;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* community-review-list */
+.review-image {
+  border: 1px solid var(--color-footer-bg);
+}
+
+.review-image>img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.review-info {
+  border: 1px solid var(--color-footer-bg);
+  padding: 0 15px;
+}
+
+.review-title {
+  padding: 2px 0 10px;
+}
+
+.review-title>a>h3,
+.review-title>a>p {
+  margin-bottom: 3px;
+}
+
+.review-rating-count {
+  display: flex;
+  justify-content: space-between;
+}
+
+.review-detail ul {
+  list-style-type: none;
+}
+
+.review-detail-list {
+  border-top: 1px solid var(--color-footer-bg);
+  display: flex;
+  justify-content: start;
+  gap: 0.5rem;
+  align-items: start;
+  padding: 13px 0;
+}
+
+.review-detail-list>img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}

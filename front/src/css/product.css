@@ -1,0 +1,211 @@
+.image-container {
+  text-align: center;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.category-list {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.category-list ul {
+  list-style-type: none;
+  padding: 1.8rem;
+  display: inline-flex;
+  gap: 60px;
+}
+
+.category-list li {
+  text-align: center;
+  font-size: 21px;
+}
+
+.category-list li:hover,
+.category-list li.active {
+  color: black;
+  font-weight: bold;
+  border-bottom: 3px solid black;
+  cursor: pointer;
+}
+
+.sort-list {
+  /* 오른쪽 상단에 위치하도록 설정 */
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.sort-list ul {
+  font-size: 13px;
+  list-style-type: none;
+  padding: 0;
+  display: inline-flex;
+  gap: 10px;
+  margin: 0;
+  justify-content: flex-end; /* 오른쪽 정렬 */
+}
+
+.sort-list li {
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.sort-list li:hover {
+  color: #d6acda;
+}
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 중앙 정렬 */
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 가로로 4줄 */
+  gap: 40px;
+  margin-top: 40px;
+  width: 100%;
+  text-decoration: none;
+}
+
+.product-link {
+  text-decoration: none; /* 앵커 태그 밑줄 제거 */
+  color: inherit; /* 부모 요소로부터 색상 상속 */
+}
+
+.product-item {
+  width: 100%;
+  margin: 10px 0;
+  /* border: 1px solid #ccc; */
+  padding: 10px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  /* background-color: #fff; */
+  text-align: left;
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+}
+
+.product-item div {
+  font-size: 0.9em; /* 글자 크기 줄이기 */
+}
+
+.pagination {
+  margin-top: 60px;
+  padding-bottom: 160px;
+  text-align: center;
+}
+
+.page-button {
+  border: none;
+  margin: 0 5px;
+  padding: 5px 10px;
+  color: black;
+  cursor: pointer;
+  background-color: white;
+}
+
+.page-button:focus {
+  background-color: #f1f1f1;
+}
+
+.left-button,
+.right-button {
+  background-color: white;
+  border: none;
+}
+
+/* product.css */
+.product-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-icons {
+  display: none;
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 10px;
+}
+
+.product-item:hover .product-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.faheart, .facart {
+  color: black;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+
+.faheart,
+.facart {
+  font-size: 23px; /* 아이콘 크기 키우기 */
+  border-radius: 50%; /* 동그라미 모양의 배경을 위한 경계 반경 설정 */
+  background-color: white; /* 하얀색 배경 추가 */
+  padding: 18px; /* 내부 여백 추가 */
+}
+
+.faheart:hover{
+  color: #d6acda;
+}
+
+.faheart:active{
+  color: #d6acda;
+}
+
+/* 공통 스타일 */
+.product_info {
+  padding: 15px 5px; /* 위 아래 여백 추가 */
+}
+
+/* 상품 이름 스타일 */
+.product_name {
+  font-size: 1.5em; /* 상품 이름을 크게 설정 */
+  font-weight: bold;
+  margin-bottom: 10px; /* 아래쪽 여백 추가 */
+}
+
+/* 상품 가격 스타일 */
+.product_price p {
+  display: inline; /* p 요소들을 가로로 나열 */
+  margin-right: 7px; /* 각 요소 사이의 간격 설정 */
+}
+
+/* 세일 퍼센트 스타일 */
+.sale_per {
+  font-weight: bold;
+  color: purple;
+}
+
+/* 세일된 값 스타일 */
+.sale_price {
+  font-weight: bold;
+  color: black;
+}
+
+/* 기본 가격 스타일 */
+.price {
+  color: gray;
+  text-decoration: line-through;
+}
+
+

@@ -1,0 +1,568 @@
+/* 
+  Global
+*/
+
+:root {
+  /* color list */
+  --color-purple: #d6acda;
+  --color-white: #ffffff;
+  --color-category-black: #333333;
+  --color-category-gray: #999999;
+  --color-footer-bg: #f8f8f8;
+  --color-footer-text: #666666;
+  --color-header-menu: #222222;
+}
+
+/* 
+  commons 
+*/
+
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans";
+}
+
+/*
+  Login : 로그인 화면 
+*/
+
+.content {
+  margin: 0;
+  padding: 0;
+  max-width: 1400px;
+  margin: auto;
+  text-align: center;
+}
+
+.login-title {
+  /* border: 1px solid blue; */
+  font-size: 50px;
+  margin: 95px 0 60px 0;
+}
+
+.login-form {
+  /* border: 1px solid green; */
+  line-height: 50px;
+}
+
+.login-form-list {
+  list-style-type: none;
+}
+
+.login-input {
+  border: none;
+  /* border: 1px solid brown; */
+  border-bottom: 1px solid #cccccc; 
+  width: 420px;
+  height: 55px;
+}
+
+.login-input:first-child {
+  margin-bottom: 7px;
+}
+
+.login-input::placeholder {
+  color: #cccccc;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.login-detail {
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 0 auto;
+  width: 420px;
+  height: 60px;
+}
+
+.login-id-save-checkbox,
+.login-secure-connection {
+  font-size: 12px;
+}
+
+.login-secure-connection {
+  cursor: default;
+}
+
+.login-id-save-checkbox {
+  /* border: 1px solid blue; */
+  cursor: pointer;
+}
+
+.login-button {
+  background-color: var(--color-purple);
+  border: none;
+  width: 420px;
+  height: 52px;
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+.login-button:hover {
+  background-color: var(--color-category-black);
+  cursor: pointer;
+}
+
+.login-button-list {
+  /* border: 1px solid magenta; */
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  gap: 5px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.login-help-button {
+  background-color: white;
+  border: none;
+  color: #666;
+  font-weight: 500;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.login-help-button:hover {
+  color: black;
+}
+
+.id-find {
+  border: 1px solid #cccccc;
+  border-top: none;
+  border-bottom: none;
+  padding: 0 0.6rem;
+}
+
+.login-signup-button-notice {
+  border: 1px solid #dfdfdf;
+  width: 420px;
+  margin: 0 auto;
+  list-style-type: none;
+}
+
+.login-signup-question {
+  margin: 2.6rem 0 2rem 0;
+  color: black;
+  font-size: 16px;
+}
+
+.login-signup-guide {
+  color: #777;
+  font-size: 13px;
+  line-height: 23px;
+  margin: 2rem 0;
+}
+
+.login-signup-button {
+  border: 1px solid #999;
+  background-color: white;
+  padding: 0.9rem 4.3rem;
+  margin-bottom: 2.8rem;
+  color: #555;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.login-signup-button:hover {
+  background-color: var(--color-purple);
+  border: 1px solid var(--color-purple);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.sns-login-title {
+  padding: 2rem;
+  font-weight: bold;
+}
+
+.sns-login-button-list {
+  /* border: 1px solid red; */
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 10px;
+  padding-bottom: 150px;
+}
+
+.sns-login-button-area {
+  border: none;
+  background-color: white;
+}
+
+.sns-login-button {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+/* 
+  NonmemberOrderinquiry : 비회원 주문조회
+*/
+
+.nonmember-login-title {
+  font-size: 36px;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.nonmember-login-subtitle {
+  font-size: 13px;
+  margin-bottom: 30px;
+}
+
+.nonmember-order-inquiry-form-box {
+  text-align: center;
+}
+
+.nonmember-order-inquiry-form {
+  /* border: 1px solid firebrick; */
+  width: 100%;
+}
+
+.nonmember-order-inquiry-table {
+  border: none;
+  width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.nonmember-order-inquiry-table-head {
+  /* border: 1px solid blue; */
+  border: none;
+}
+
+.nonmember-login-label {
+  /* border: 1px solid forestgreen; */
+  display: inline-block;
+  width: 180px;
+  text-align: left;
+  color: #333;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 8px 0;
+}
+
+.nonmember-login-input {
+  display: inline-block;
+  width: 240px;
+  height: 35px;
+  border: 1px solid #c6c6c6;
+  margin-bottom: 15px;
+  vertical-align: baseline;
+}
+
+.nonmember-login-order-inquiry-button {
+  display: inline-block;
+  background-color: var(--color-purple);
+  border: none;
+  width: 420px;
+  height: 50px;
+  color: var(--color-white);
+  font-weight: 500;
+  font-size: 15px;
+  margin-top: 0.7rem;
+  margin-bottom: 140px;
+}
+
+.nonmember-login-order-inquiry-button:hover {
+  background-color: var(--color-category-black);
+  cursor: pointer;
+}
+
+/* 
+  FindId : 아이디 찾기,
+  FindPassword : 비밀번호 찾기
+*/
+
+.home-to-current-menu {
+  /* border: 1px solid red; */
+  margin: 0 auto;
+  margin-top: 3rem;
+  text-align: left;
+  width: 1300px;
+  font-size: 11px;
+}
+
+.go-to-home-button {
+  text-decoration: none;
+}
+
+.findid-intro,
+.findpass-intro,
+.signup-intro,
+.mypage-intro {
+  font-weight: bold;
+}
+
+.page-title {
+  font-size: 35px;
+  margin-top: 70px;
+  margin-bottom: 60px;
+  color: #333;
+}
+
+.findid-table,
+.findpass-table {
+  border: 1px solid #d2d2d2;
+  margin: 0 auto;
+  width: 1300px;
+  padding: 2rem 0;
+  margin-bottom: 300px;
+}
+
+.page-subtitle {
+  /* border: 1px solid red; */
+  font-size: 23px;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 1.8rem;
+}
+
+.findid-table-head,
+.findpass-table-head {
+  /* border: 1px solid green; */
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.findid-label,
+.findpass-label {
+  /* border: 1px solid pink; */
+  display: inline-block;
+  width: 160px;
+  height: 35px;
+  color: #555;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+  line-height: 35px;
+}
+
+.findid-radio-list,
+.findpass-radio-list {
+  /* border: 1px solid red;  */
+  display: flex;
+  width: 270px;
+  height: 35px;
+  line-height: 35px;
+  gap: 2rem;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.findid-input,
+.findpass-input {
+  border: 1px solid #c6c6c6;
+  width: 270px;
+  height: 35px;
+  font-size: 15px;
+  vertical-align: baseline;
+}
+
+.findid-phonenumber,
+.findpass-phonenumber {
+  /* border: 1px solid blue; */
+  width: 270px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.findid-phonenumber-input,
+.findpass-phonenumber-input {
+  border: 1px solid #c6c6c6;
+  width: 70px;
+  height: 35px;
+}
+
+.findid-button,
+.findpass-button {
+  /* border: 1px solid red; */
+  margin: 1rem 0;
+  margin-top: 2.5rem;
+  background-color: var(--color-purple);
+  border: none;
+  width: 430px;
+  height: 52px;
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.findid-button:hover,
+.findpass-button:hover {
+  background-color: var(--color-category-black);
+  cursor: pointer;
+}
+
+/*
+  FindIdComplete : 아이디 찾기 완료
+*/
+
+.login-complete-table-box {
+  border: 1px solid #d2d2d2;
+  margin: 0 auto;
+  width: 1300px;
+  padding: 2rem 0;
+  margin-bottom: 300px;
+}
+
+.login-complete-notice {
+  font-size: 20px;
+  font-weight: bold;
+  color: #218ee7;
+}
+
+.login-complete-table {
+  border: 1px solid #d2d2d2;
+  border-collapse: collapse;
+  margin: 30px auto;
+  width: 450px;
+  height: 180px;
+  margin-bottom: 45px;
+}
+
+.login-table-row {
+  background-color: #ececec67;
+  height: 65px;
+}
+
+.login-complete-table-data {
+  text-align: start;
+}
+
+.login-complete-gratitude {
+  /* border: 1px solid blue; */
+  font-weight: bold;
+}
+
+.login-complete-table-data > span {
+  /* border: 1px solid red; */
+  display: inline-block;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.login-complete-table-head {
+  width: 110px;
+}
+
+.login-complete-table-data-title {
+  border-left: 1px solid #d2d2d2;
+  border-right: 1px solid #FFF;
+  width: 130px;
+  text-align: start;
+  padding-left: 15px;
+  line-height: 26px;
+}
+
+.login-complete-table-data-content {
+  text-align: start;
+  line-height: 26px;
+}
+
+.findid-count {
+  color: #218ee7;
+}
+
+.findid-complete-button-box {
+  margin: 40px auto;
+}
+
+.findid-complete-login-button {
+  border: none;
+  border-radius: 3px;
+  background-color: var(--color-purple);
+  width: 150px;
+  height: 45px;
+  color: var(--color-white);
+  font-weight: 500;
+  margin-right: 3px;
+  cursor: pointer;
+}
+
+.findid-findpass-button {
+  border: none;
+  border-radius: 3px;
+  background-color: #999;
+  width: 150px;
+  height: 45px;
+  color: var(--color-white);
+  font-weight: 500;
+  margin-left: 3px;
+  cursor: pointer;
+}
+
+/* 
+  FindPasswordComplete : 비밀번호 찾기 완료
+*/
+
+.findpass-complete-table-box {
+  border: 1px solid #d2d2d2;
+  margin: 0 auto;
+  width: 1300px;
+  padding: 2rem 0;
+  margin-bottom: 300px;
+}
+
+.findpass-type-info-box {
+  /* border: 1px solid red; */
+  margin: 0 auto;
+  width: 500px;
+  padding: 10px 0;
+  }
+  
+.findpass-info-list1 {
+  /* border: 1px solid blue; */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+  margin-bottom: 10px;
+}
+  
+.findpass-info-list2 {
+  /* border: 1px solid green; */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+}
+
+.findpass-info-list2-num {
+  color: #218ee7;
+}
+
+.temporarypass-send-button {
+  border: none;
+  border-radius: 3px;
+  background-color: var(--color-purple);
+  width: 190px;
+  height: 45px;
+  color: var(--color-white);
+  font-weight: 500;
+  margin-right: 3px;
+  cursor: pointer;
+}
+
+.findpass-cancel-button {
+  border: none;
+  border-radius: 3px;
+  background-color: #999;
+  width: 190px;
+  height: 45px;
+  color: var(--color-white);
+  font-weight: 500;
+  margin-left: 3px;
+  cursor: pointer;
+}

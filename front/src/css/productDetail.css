@@ -1,0 +1,190 @@
+/* productDetail.css */
+
+.product-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 20px; */
+  text-align: center;
+}
+
+.product-img{
+  width: 500px;
+}
+
+.product-info {
+  display: flex;
+  /* width: 100%; */
+  padding-top: 80px;
+  padding-bottom: 90px;
+  border-bottom: 1px solid #b3b1b1
+}
+
+.right-icon {
+  margin-right: 10px; /* 원하는 간격으로 조정 */
+}
+
+.product-info .info-icon {
+  color: gray;
+  font-size: 12px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center; /* 수직 정렬 */
+  gap: 10px; /* 아이콘 간격 조정 */
+}
+
+.product-name {
+  font-size: 25px;
+  padding-bottom: 15px;
+}
+
+.product-price{
+  padding-bottom: 30px;
+  border-bottom: 1px solid #b3b1b1;
+}
+  
+
+.product-price p {
+  display: inline-block; /* 가로로 정렬 */
+    margin-right: 20px; /* 간격 조정 */
+  
+}
+
+.sale-per {
+  font-weight: bold;
+  color: #c7a0ce;
+  font-size: 26px;
+}
+
+.sale-price {
+  font-weight: bold;
+  color: black;
+  font-size: 26px;
+}
+
+.detailprice {
+  font-size: 20px;
+  color: gray;
+  text-decoration: line-through;
+}
+
+
+
+.product-info .info-left {
+  width: 45%;
+  margin-right: 40px;
+  text-align: right;
+}
+
+.product-info .info-right {
+  width: 700px;
+  text-align: left;
+  margin-left: 40px;
+}
+
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  margin-top: 45px;
+  margin-bottom: 20px;
+  border-bottom: 0.5px solid #b3b1b1;
+  
+}
+
+.quantity-selector h3 {
+  padding-right: 20px;
+}
+
+.total-price{
+  margin-top: 30px;
+  margin-bottom: 40px;
+  text-align: right;
+  font-weight: bold;
+}
+
+
+.total-price-font {
+  font-size: 40px; /* 폰트 크기 조정 */
+  color: #c7a0ce; /* 핑크색 설정 */
+}
+
+
+.quantity-selector button {
+  padding: 5px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #000;
+  border: 1px solid #000;
+  background-color: #fff;
+  border-radius: 0;
+  /* 네모난 모양을 위해 테두리 반경 제거 */
+  margin-right: 5px;
+}
+
+.quantity-selector button:last-child {
+  margin-right: 0;
+}
+
+.action-buttons {
+  margin-top: 20px;
+}
+
+.action-buttons button {
+  padding: 15px 120px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: #c7a0ce;
+  /* 배경색을 보라색으로 변경 */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.action-buttons button:last-child {
+  margin-right: 0;
+}
+
+.product-info-image {
+  padding-top: 100px;
+}
+
+.purchase-guide {
+  padding-bottom: 60px;
+}
+
+.purchase-guide h3 {
+  display: flex;
+}
+
+.purchase-guide .content {
+  display: flex;
+}
+
+.buy-info {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.purchase-guide .left {
+  flex: 3;
+  max-width: 25%;
+  background-color: #f8f8f8;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.purchase-guide .right {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+  box-sizing: border-box;
+
+}
