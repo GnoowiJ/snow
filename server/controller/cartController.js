@@ -1,7 +1,7 @@
 import * as repository from "../repository/cartRepository.js";
 
-/* 
-    장바구니 상품 추가
+/**
+    @desc 장바구니 상품 추가
 */
 export const addcart = async (req, res) => {
     const CartData = req.body;
@@ -10,8 +10,8 @@ export const addcart = async (req, res) => {
     res.end();
 }
 
-/* 
-    장바구니 수량 가져오기
+/** 
+*  @desc 장바구니 수량 가져오기
 */
 export const cartCount = async (req, res) => {
     const {userId} = req.body;
@@ -21,7 +21,7 @@ export const cartCount = async (req, res) => {
 }
 
 /**
- * 장바구니 리스트 가져오기
+ * @desc 장바구니 리스트 가져오기
  */
 export const cartList = async (req, res) => {
     const {userId} = req.body;
@@ -30,7 +30,9 @@ export const cartList = async (req, res) => {
     res.end();
 } 
 
-/* 장바구니 선택된 항목 여러개 삭제 */
+/** 
+    @desc 장바구니 선택된 항목 여러개 삭제 
+*/
 export const deleteCartSelected = async (req, res) => {
     const cidList = req.body;
     const result = await repository.deleteCartSelected(cidList);
@@ -38,7 +40,9 @@ export const deleteCartSelected = async (req, res) => {
     res.end();
 }
 
-/* 장바구니 단일 항목 삭제 */
+/** 
+    @desc 장바구니 단일 항목 삭제 
+*/
 export const deleteCartOne = async (req, res) => {
     const {cid} = req.body;
     const result = await repository.deleteCartOne(cid);

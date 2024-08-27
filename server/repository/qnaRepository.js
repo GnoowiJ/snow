@@ -1,7 +1,7 @@
 import { db_mysql2 as db } from "../db/mysql2_connection.js";
 
 /**
- * 1:1 문의 리스트 조회
+ * @desc 1:1 문의 리스트 조회
  */
 export const getQna = async () => {
   const sql = `
@@ -18,7 +18,7 @@ export const getQna = async () => {
 };
 
 /**
- * 1:1 문의 상세 조회
+ * @desc 1:1 문의 상세 조회
  */
 export const getQnaDetail = async (id) => {
   const sql = `
@@ -34,7 +34,7 @@ export const getQnaDetail = async (id) => {
 };
 
 /**
- * 1:1 문의 글작성
+ * @desc 1:1 문의 글작성
  */
 export const writeQna = async (formData) => {
   const sql = `
@@ -53,7 +53,7 @@ export const writeQna = async (formData) => {
 };
 
 /**
- * 1:1 문의 조회수 업데이트
+ * @desc 1:1 문의 조회수 업데이트
  */
 export const updateBqHits = async (bqid) => {
   const sql = `
@@ -67,6 +67,9 @@ export const updateBqHits = async (bqid) => {
     .catch((error) => console.log(error));
 }
 
+/** 
+ * @desc QNA 총 리스트 
+ */
 export const getTotalQna = async () => {
   const sql = `
     SELECT COUNT(*) as qnaCnt
@@ -78,6 +81,9 @@ export const getTotalQna = async () => {
     .catch((error) => console.log(error));
 }
 
+/**
+ * @desc QNA의 아이디 
+ * */
 export const existQnaById = async (userId) => {
   const sql = `
       SELECT A.*, B.user_name FROM
@@ -106,6 +112,9 @@ export const existTotalQnaById = async (userId) => {
     .catch((error) => console.log(error));
 }
 
+/**
+ * @desc 로그인된 사용자 정보 
+ * */
 export const getUser = async (userId) => {
   const sql = `
     SELECT email_id, email_domain,

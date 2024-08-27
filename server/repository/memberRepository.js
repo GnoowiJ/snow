@@ -4,9 +4,7 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
 /**
- * 회원가입
- * @param {*} memberData 
- * @returns 
+ * @desc 회원가입
  */
 export const signupMember = async (memberData) => {
   let result_rows = 0;
@@ -18,7 +16,7 @@ export const signupMember = async (memberData) => {
   essential_agree)
   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
   
-  // 일반전화번호 값 입력여부 체크
+  // @desc 일반전화번호 값 입력여부 체크
   let lineNumberFirst = null;
   let lineNumberMiddle = null;
   let lineNumberLast = null;
@@ -27,7 +25,7 @@ export const signupMember = async (memberData) => {
     lineNumberMiddle = memberData.landlineNumber1;
     lineNumberLast = memberData.landlineNumber2;
   }
-  // 결혼기념일 입력여부 체크
+  // @desc 결혼기념일 입력여부 체크
   let marryYear = null;
   let marryMonth = null;
   let marryDay = null;
@@ -37,7 +35,7 @@ export const signupMember = async (memberData) => {
     marryDay = memberData.merryDay;
   }
 
-  // 배우자생일 입력여부 체크
+  // @desc 배우자생일 입력여부 체크
   let partnerBirthYear = null;
   let partnerBirthMonth = null;
   let partnerBirthDay = null;
@@ -85,7 +83,7 @@ export const signupMember = async (memberData) => {
 }
 
 /**
- * 아이디 중복체크
+ * @desc 아이디 중복체크
  */
 export const idCheck = async (userId) => {
   const sql = `
@@ -98,7 +96,7 @@ export const idCheck = async (userId) => {
 };
 
 /**
- * 로그인 처리
+ * @desc 로그인 처리
  */
 export const login = async (loginData) => {
   const sql = `
@@ -132,7 +130,7 @@ export const login = async (loginData) => {
 };
 
 /**
- * 아이디 찾기
+ * @desc 아이디 찾기
  */
 export const findId = async (findIdData) => {
   let sql = "";
@@ -164,7 +162,7 @@ export const findId = async (findIdData) => {
 };
 
 /**
- * 비밀번호 찾기
+ * @desc 비밀번호 찾기
  */
 export const findPass = async (findPassData) => {
   let sql = "";
@@ -203,7 +201,7 @@ export const findPass = async (findPassData) => {
 };
 
 /**
- * 회원정보 수정 - 회원정보 불러오기
+ * @desc 회원정보 수정 - 회원정보 불러오기
  */
 export const memberInfo = async (userId) => {
   const sql = `
@@ -217,7 +215,7 @@ export const memberInfo = async (userId) => {
 };
 
 /**
- * 회원정보수정 처리
+ * @desc 회원정보수정 처리
  */
 export const update = async (updateData) => {
   const sql = `

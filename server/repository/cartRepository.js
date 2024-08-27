@@ -1,7 +1,7 @@
 import { db_mysql2 as db } from "../db/mysql2_connection.js";
 
-/* 
-    장바구니 상품 추가 (동일 상품 있을 시 수량만 추가)
+/** 
+    @desc 장바구니 상품 추가 (동일 상품 있을 시 수량만 추가)
 */
 export const addcart = async (CartData) => {
     const checkResult = await cartCheck(CartData.pid, CartData.userId);
@@ -34,8 +34,8 @@ export const addcart = async (CartData) => {
     return {cnt: result_rows, qty: CartData.qty}
 }
 
-/* 
-    장바구니 수량 가져오기
+/** 
+    @desc 장바구니 수량 가져오기
 */
 export const cartCount = async (userId) => {
     const sql = `
@@ -49,7 +49,9 @@ export const cartCount = async (userId) => {
       .catch((error) => console.log(error));
 }
 
-/* 장바구니 상품 체크 */
+/** 
+ * @desc 장바구니 상품 체크 
+ */
 async function cartCheck(pid, userId) {
     const sql = `
         SELECT cid, COUNT(cid) AS cnt FROM snowfox_cart
@@ -64,7 +66,7 @@ async function cartCheck(pid, userId) {
 }
 
 /**
- * 장바구니 리스트 가져오기
+ * @desc 장바구니 리스트 가져오기
  */
 export const cartList = async (userId) => {
     const sql = `
@@ -87,7 +89,9 @@ export const cartList = async (userId) => {
     return {list: cartList, cnt: cntResult};
 };
 
-/* 장바구니 수량 */
+/**
+ * @desc 장바구니 수량 
+ */
 async function getCartCnt(userId) {
     const sql = `
         SELECT COUNT(*) AS cnt FROM snowfox_cart
@@ -99,7 +103,9 @@ async function getCartCnt(userId) {
     .catch((error)=>console.log(error));
 }
 
-/* 선택된 장바구니 품목 삭제 */
+/**
+ * @desc 선택된 장바구니 품목 삭제 
+ */
 export const deleteCartSelected = async (cidList) => {
     const sql = `
         DELETE FROM snowfox_cart
@@ -116,7 +122,9 @@ export const deleteCartSelected = async (cidList) => {
     return {cnt: result_rows};
 }
 
-/* 단일 상품 삭제 */
+/** 
+ * @desc 단일 상품 삭제 
+ */
 export const deleteCartOne = async (cid) => {
     const sql = `
         DELETE FROM snowfox_cart

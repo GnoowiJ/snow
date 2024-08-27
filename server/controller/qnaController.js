@@ -1,7 +1,7 @@
 import * as repository from "../repository/qnaRepository.js";
 
 /**
- * 1:1 문의 리스트 조회
+ * @desc 1:1 문의 리스트 조회
  */
 export async function getQna(req, res) {
   const qnaListResult = await repository.getQna();
@@ -11,7 +11,7 @@ export async function getQna(req, res) {
 }
 
 /**
- * 1:1 문의 상세 조회
+ * @desc 1:1 문의 상세 조회
  */
 export async function getQnaDetail(req, res) {
   const { id } = req.params;
@@ -21,7 +21,7 @@ export async function getQnaDetail(req, res) {
 }
 
 /**
- * 1:1 문의 글작성
+ * @desc 1:1 문의 글작성
  */
 export async function writeQna(req, res) {
   const formData = req.body;
@@ -31,7 +31,7 @@ export async function writeQna(req, res) {
 }
 
 /**
- * 1:1 문의 조회수 업데이트
+ * @desc 1:1 문의 조회수 업데이트
  */
 export async function updateBqHits(req, res) {
   const { bqid } = req.body;
@@ -39,13 +39,17 @@ export async function updateBqHits(req, res) {
   res.end();
 }
 
-/* QNA 총 리스트 */
+/** 
+ * @desc QNA 총 리스트 
+ */
 export async function getTotalQna(req, res) {
   res.json(await repository.getTotalQna());
   res.end();
 }
 
-/* QNA의 아이디 */
+/**
+ * @desc QNA의 아이디 
+ * */
 export async function existQnaById(req, res) {
   const {userId} = req.body;
   const qnaListResult = await repository.existQnaById(userId);
@@ -55,7 +59,9 @@ export async function existQnaById(req, res) {
   res.end();
 }
 
-/* 로그인된 사용자 정보 */
+/**
+ * @desc 로그인된 사용자 정보 
+ * */
 export async function getUser(req, res) {
   const {userId} = req.body;
   res.json(await repository.getUser(userId));
