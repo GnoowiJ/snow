@@ -2,7 +2,6 @@ import { db_mysql2 as db } from "../db/mysql2_connection.js";
 
 /**
  * 1:1 문의 리스트 조회
- * @returns 
  */
 export const getQna = async () => {
   const sql = `
@@ -20,8 +19,6 @@ export const getQna = async () => {
 
 /**
  * 1:1 문의 상세 조회
- * @param {*} id 
- * @returns 
  */
 export const getQnaDetail = async (id) => {
   const sql = `
@@ -38,8 +35,6 @@ export const getQnaDetail = async (id) => {
 
 /**
  * 1:1 문의 글작성
- * @param {*} formData 
- * @returns 
  */
 export const writeQna = async (formData) => {
   const sql = `
@@ -59,8 +54,6 @@ export const writeQna = async (formData) => {
 
 /**
  * 1:1 문의 조회수 업데이트
- * @param {*} bqid 
- * @returns 
  */
 export const updateBqHits = async (bqid) => {
   const sql = `

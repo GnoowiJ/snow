@@ -86,8 +86,6 @@ export const signupMember = async (memberData) => {
 
 /**
  * 아이디 중복체크
- * @param {*} userId 
- * @returns 
  */
 export const idCheck = async (userId) => {
   const sql = `
@@ -101,8 +99,6 @@ export const idCheck = async (userId) => {
 
 /**
  * 로그인 처리
- * @param {*} loginData 
- * @returns 
  */
 export const login = async (loginData) => {
   const sql = `
@@ -137,8 +133,6 @@ export const login = async (loginData) => {
 
 /**
  * 아이디 찾기
- * @param {*} findIdData 
- * @returns 
  */
 export const findId = async (findIdData) => {
   let sql = "";
@@ -171,8 +165,6 @@ export const findId = async (findIdData) => {
 
 /**
  * 비밀번호 찾기
- * @param {*} findPassData 
- * @returns 
  */
 export const findPass = async (findPassData) => {
   let sql = "";
@@ -226,8 +218,6 @@ export const memberInfo = async (userId) => {
 
 /**
  * 회원정보수정 처리
- * @param {*} updateData 
- * @returns 
  */
 export const update = async (updateData) => {
   const sql = `

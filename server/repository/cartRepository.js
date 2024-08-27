@@ -87,6 +87,7 @@ export const cartList = async (userId) => {
     return {list: cartList, cnt: cntResult};
 };
 
+/* 장바구니 수량 */
 async function getCartCnt(userId) {
     const sql = `
         SELECT COUNT(*) AS cnt FROM snowfox_cart
@@ -98,6 +99,7 @@ async function getCartCnt(userId) {
     .catch((error)=>console.log(error));
 }
 
+/* 선택된 장바구니 품목 삭제 */
 export const deleteCartSelected = async (cidList) => {
     const sql = `
         DELETE FROM snowfox_cart
@@ -114,6 +116,7 @@ export const deleteCartSelected = async (cidList) => {
     return {cnt: result_rows};
 }
 
+/* 단일 상품 삭제 */
 export const deleteCartOne = async (cid) => {
     const sql = `
         DELETE FROM snowfox_cart

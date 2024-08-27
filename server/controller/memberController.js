@@ -2,8 +2,6 @@ import * as repository from "../repository/memberRepository.js";
 
 /**
  * 회원가입
- * @param {*} req 
- * @param {*} res 
  */
 export const signupMember = async (req, res) => {
   const memberData = req.body;
@@ -14,8 +12,6 @@ export const signupMember = async (req, res) => {
 
 /**
  * 아이디 중복체크
- * @param {*} req 
- * @param {*} res 
  */
 export const idCheck = async (req, res) => {
   const { userId } = req.body;
@@ -26,8 +22,6 @@ export const idCheck = async (req, res) => {
 
 /**
  * 로그인 처리
- * @param {*} req 
- * @param {*} res 
  */
 export const login = async (req, res) => {
   const loginData = req.body;
@@ -38,8 +32,6 @@ export const login = async (req, res) => {
 
 /**
  * 아이디 찾기
- * @param {*} req 
- * @param {*} res 
  */
 export const findId = async (req, res) => {
   const findIdData = req.body;
@@ -50,8 +42,6 @@ export const findId = async (req, res) => {
 
 /**
  * 비밀번호 찾기
- * @param {*} req 
- * @param {*} res 
  */
 export const findPass = async (req, res) => {
   const findPassData = req.body;
@@ -72,8 +62,6 @@ export const memberInfo = async (req, res) => {
 
 /**
  * 회원정보 수정 처리
- * @param {*} req 
- * @param {*} res 
  */
 export const update = async (req, res) => {
   const updateData = req.body;

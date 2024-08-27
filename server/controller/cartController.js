@@ -22,8 +22,6 @@ export const cartCount = async (req, res) => {
 
 /**
  * 장바구니 리스트 가져오기
- * @param {*} req 
- * @param {*} res 
  */
 export const cartList = async (req, res) => {
     const {userId} = req.body;
@@ -32,6 +30,7 @@ export const cartList = async (req, res) => {
     res.end();
 } 
 
+/* 장바구니 선택된 항목 여러개 삭제 */
 export const deleteCartSelected = async (req, res) => {
     const cidList = req.body;
     const result = await repository.deleteCartSelected(cidList);
@@ -39,6 +38,7 @@ export const deleteCartSelected = async (req, res) => {
     res.end();
 }
 
+/* 장바구니 단일 항목 삭제 */
 export const deleteCartOne = async (req, res) => {
     const {cid} = req.body;
     const result = await repository.deleteCartOne(cid);

@@ -2,7 +2,6 @@ import { db_mysql2 as db } from "../db/mysql2_connection.js";
 
 /**
  * 이벤트 전체 조회
- * @returns 
  */
 export const getEvent = async () => {
   const sql = `
@@ -23,8 +22,6 @@ export const getEvent = async () => {
 
 /**
  * 이벤트 상세 조회
- * @param {*} id 
- * @returns 
  */
 export const getEventDetail = async (id) => {
   const sql = `
@@ -40,8 +37,6 @@ export const getEventDetail = async (id) => {
 
 /**
  * 이벤트 조회수 업데이트
- * @param {*} eventId 
- * @returns 
  */
 export const updateEventHits = async (eventId) => {
   const sql = `
